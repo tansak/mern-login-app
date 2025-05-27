@@ -7,7 +7,7 @@ dotenv.config();
 const app = express();
 
 app.use(cors({
-  origin: ['http://localhost:3000', '<your-vercel-frontend-url>'], // Add Vercel URL later
+  origin: ['http://localhost:3000', 'https://mern-login-5azgbfcmi-satishs-projects-7e0b4f78.vercel.app'], // Add Vercel URL later
   credentials: true
 }));
 app.use(express.json());
