@@ -6,9 +6,12 @@ const dotenv = require('dotenv');
 dotenv.config();
 const app = express();
 
+// Allow specific origins
 app.use(cors({
-  origin: ['http://localhost:3000', 'https://mern-login-5azgbfcmi-satishs-projects-7e0b4f78.vercel.app'], // Add Vercel URL later
-  credentials: true
+  origin: ['http://localhost:3000', 'https://mern-login-app-navy.vercel.app'],
+  credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'], // Include OPTIONS for preflight
+  allowedHeaders: ['Content-Type', 'Authorization']
 }));
 app.use(express.json());
 
